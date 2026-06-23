@@ -20,9 +20,13 @@
         case "0":
             Console.WriteLine("bye.");
             return;
+        default:
+            Console.WriteLine("請輸入0-5!!");
+            break;
     }
     Console.Write("Press any key to continue...");
     Console.ReadKey();
+    Console.Clear();
 }
 string Choice()
 {
