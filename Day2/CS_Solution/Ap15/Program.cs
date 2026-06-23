@@ -9,9 +9,14 @@ do
     iscorrect = int.TryParse(s, out a );
     if(!iscorrect) Console.WriteLine("a必須是整數");
 } while (!iscorrect);
-Console.Write("b=");
-s = Console.ReadLine();
-b = int.Parse(s);
+
+do
+{
+    Console.Write("b=");
+    s = Console.ReadLine();
+    iscorrect = int.TryParse(s, out b);
+    if (!iscorrect) Console.WriteLine("b必須是整數");
+} while (!iscorrect);
 
 Console.WriteLine($"{a} + {b} = {a + b}");
 
