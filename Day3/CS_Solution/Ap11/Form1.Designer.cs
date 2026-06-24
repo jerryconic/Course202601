@@ -41,7 +41,6 @@
             // 
             this.grpGuess.Controls.Add(this.txtGuess);
             this.grpGuess.Controls.Add(this.label1);
-            this.grpGuess.Enabled = false;
             this.grpGuess.Location = new System.Drawing.Point(41, 29);
             this.grpGuess.Name = "grpGuess";
             this.grpGuess.Size = new System.Drawing.Size(234, 83);
@@ -77,7 +76,6 @@
             // 
             // btnGuess
             // 
-            this.btnGuess.Enabled = false;
             this.btnGuess.Location = new System.Drawing.Point(128, 130);
             this.btnGuess.Name = "btnGuess";
             this.btnGuess.Size = new System.Drawing.Size(64, 31);
@@ -109,6 +107,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.grpGuess.ResumeLayout(false);
             this.grpGuess.PerformLayout();
             this.ResumeLayout(false);

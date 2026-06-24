@@ -40,6 +40,14 @@ namespace Ap11
             Close();
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            grpGuess.Enabled = false;
+            btnStart.Enabled = true;
+            btnGuess.Enabled = false;
+
+        }
+
         private void btnStart_Click(object sender, EventArgs e)
         {
             Random rnd = new Random();
