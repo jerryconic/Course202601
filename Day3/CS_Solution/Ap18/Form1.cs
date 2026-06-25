@@ -30,9 +30,15 @@ namespace Ap18
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult ans = MessageBox.Show("確定要離開", "離開",
-                MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                MessageBoxButtons.YesNo, MessageBoxIcon.Information, 
+                MessageBoxDefaultButton.Button2);
             if (ans == DialogResult.No)
                 e.Cancel = true;
+        }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+           
         }
     }
 }
