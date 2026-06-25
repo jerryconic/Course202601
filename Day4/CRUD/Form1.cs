@@ -75,5 +75,30 @@ namespace CRUD
             MessageBox.Show("Delete OK", "Delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
+
+        private void btnSelect_Click(object sender, EventArgs e)
+        {
+            SqlConnection cn = new SqlConnection(connstr);
+            SqlCommand cmd = cn.CreateCommand();
+
+            cmd.CommandText = @"SELECT * FROM dbo.Product
+                                WHERE prdt_id = @id";
+            cmd.Parameters.AddWithValue("@id", txtID.Text);
+            cn.Open();
+            SqlDataReader dr = cmd.ExecuteReader();
+            if (dr.Read())
+            {
+                txtName.Text = dr["prdt_name"].ToString();
+                txtPrice.Text = dr["price"].ToString();
+            }
+            else
+            {
+                txtName.Clear();
+                txtPrice.Clear();
+            }
+            dr.Close();
+            cn.Close();
+
+        }
     }
 }
