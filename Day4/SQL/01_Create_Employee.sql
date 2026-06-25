@@ -22,3 +22,9 @@ VALUES(1, 'John', 48000, '1990-1-1'),
 
 SELECT * FROM dbo.Employee;
 
+SELECT emp_id, emp_name 
+FROM dbo.Employee;
+
+SELECT * FROM dbo.Employee
+WHERE emp_id = 3;
+
