@@ -44,5 +44,36 @@ namespace CRUD
             MessageBox.Show("Insert OK", "Insert", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            SqlConnection cn = new SqlConnection(connstr);
+            SqlCommand cmd = cn.CreateCommand();
+            cmd.CommandText = @"UPDATE dbo.Product
+                                SET prdt_name = @name, price = @price
+                                WHERE prdt_id = @id;";
+            cmd.Parameters.AddWithValue("@id", txtID.Text);
+            cmd.Parameters.AddWithValue("@name", txtName.Text);
+            cmd.Parameters.AddWithValue("@price", txtPrice.Text);
+            cn.Open();
+            cmd.ExecuteNonQuery();
+            cn.Close();
+            MessageBox.Show("Update OK", "Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            SqlConnection cn = new SqlConnection(connstr);
+            SqlCommand cmd = cn.CreateCommand();
+            cmd.CommandText = @"DELETE FROM dbo.Product
+                                WHERE prdt_id = @id";
+            cmd.Parameters.AddWithValue("@id", txtID.Text);
+            cn.Open();
+            cmd.ExecuteNonQuery();
+            cn.Close();
+            MessageBox.Show("Delete OK", "Delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
     }
 }
