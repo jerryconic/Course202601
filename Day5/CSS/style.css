@@ -1,0 +1,36 @@
+
+        div {
+
+            height: 120px;
+            width: 600px;
+            margin: 20px;
+            padding: 10px;
+            color: blue;
+            background-color: lightyellow;
+            font-family: Verdana;
+            font-size: 16px;
+        }
+
+         #d1 {
+            border: 2px solid darkblue;
+            color: blue;
+            background-color: lightyellow;
+        }
+
+        #d2 {
+            border: 2px solid brown;
+            color: darkred;
+            background-color: pink;
+        }
+
+        .m1 {
+            color: lightyellow;
+            border: dashed 2px pink;
+            background-color: brown
+        }
+
+        .m2 {
+            color: lightcyan;
+            border: dashed 2px lightcyan;
+            background-color: blue 
+        }
