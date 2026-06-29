@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript-4</title>
+    <script>
+        function btnOk_Click(){
+            let score = parseInt(document.getElementById("txtScore").value, 10);
+            let obj = document.getElementById("txtResult");
+            if(score < 60){
+                obj.value = "不及格";
+                obj.style.backgroundColor = "lightyellow";
+                obj.style.color = "red";
+            }else{
+                obj.value = "及格";
+                obj.style.backgroundColor = "lightcyan";
+                obj.style.color = "blue";
+            }
+
+        }
+    </script>
+</head>
+<body>
+    成績:<input id="txtScore"><br>
+    結果:<input id="txtResult"><br>
+    <button onclick="btnOk_Click()">計算</button>
+</body>
+</html>
