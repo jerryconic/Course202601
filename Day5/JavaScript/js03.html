@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript-3</title>
+<script>
+    function btnAdd_Click(){
+        let a = parseFloat(document.getElementById("txtA").value);
+        let b = parseFloat(document.getElementById("txtB").value);
+        document.getElementById("txtAns").value = (a + b).toFixed(2);
+    }
+</script>
+
+</head>
+<body>
+    A=<input id="txtA"><br >
+    B=<input id="txtB"><br >
+    Ans=<input id="txtAns"><br >
+    <button onclick="btnAdd_Click()">+</button>
+    <button onclick="btnSub_Click()">-</button>
+    <button onclick="btnMul_Click()">*</button>
+    <button onclick="btnDiv_Click()">/</button>
+
+</body>
+</html>
