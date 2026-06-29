@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML-8</title>
+</head>
+<body>
+    <label for="txtData">Data:</label>
+    <input id="txtData">
+    <button>OK</button>
+    <hr>
+    <select style="width:100px;">
+        <option>USD(&dollar;)</option>
+        <option>JPY(&yen;)</option>
+        <option>EUR(&euro;)</option>
+    </select>
+    <hr>
+    <input type="radio" id="rdoType1" name="r1"><label for="rdoType1">Type I</label>
+    <input type="radio" id="rdoType2" name="r1"><label for="rdoType2">Type II</label>
+    <input type="radio" id="rdoType3" name="r1"><label for="rdoType3">Type III</label>
+    <br>
+    <input type="checkbox" id="chkType1" ><label for="chkType1">Type I</label>
+    <input type="checkbox" id="chkType2" ><label for="chkType2">Type II</label>
+    <input type="checkbox" id="chkType3" ><label for="chkType3">Type III</label>
+    <br>
+    <ul type="disc">
+        <li>Type 1</li>
+        <li>Type 2</li>
+        <li>Type 3</li>
+    </ul>
+
+    <ol type="i" >
+        <li>Type 1</li>
+        <li>Type 2</li>
+        <li>Type 3</li>
+    </ol>
+    <hr>
+    <input type="date">
+    <input type="time"><br>
+    <input type="color" onchange="txtColor.value= this.value">
+    <input id="txtColor"><br>
+    <input id="txtNumber" type="number" min="0" max="50">
+    <input type="range" min="0" max="50" onchange="txtNumber.value=this.value" >
+
+</body>
+</html>
