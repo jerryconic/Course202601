@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript-2</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <script>
+        function btnOk_Click(){
+            console.log("Hello");
+            document.getElementById("txtData").value = "Hello world!";
+        }
+    </script>
+</head>
+<body class="bg-light">
+
+    <div class="container vh-100 d-flex justify-content-center align-items-center">
+        <div class="card shadow p-4" style="width: 400px;">
+            <h3 class="text-center mb-4">JavaScript Demo</h3>
+
+            <div class="mb-3">
+                <label for="txtData" class="form-label">Data:</label>
+                <input id="txtData" class="form-control">
+            </div>
+
+            <button class="btn btn-primary w-100" onclick="btnOk_Click()">OK</button>
+        </div>
+    </div>
+
+</body>
+</html>
